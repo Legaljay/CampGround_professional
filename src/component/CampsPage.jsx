@@ -1,11 +1,15 @@
 import { NavBar } from "./NavBar";
 import Reviews from "./reviews";
 import data from "../component/CampData";
+import { useParams } from "react-router-dom";
 
 const CampsPage = () => {
     const data1 = data
+    const num = useParams()
+    
+    
   return (
-    <div className="px-14 py-4 max-h-100vh">
+    <div className="px-14 py-4 max-h-100vh" >
       <div className=" h-20 flex items-center">
         <div className="mr-[3em] p-4">
           <NavBar />
@@ -23,16 +27,16 @@ const CampsPage = () => {
       {/* ____________________content--------- */}
       <div className="grid grid-col grid-cols-[1fr,1.7fr] gap-4 my-6">
         <div className="border-4 h-fit w-fit p-9">
-          <img src="src\assets\designCamp\Assets\Map.png" />
+          <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1695818171/Map_lsr2ke.png" />
         </div>
         <div className="">
           <div className="border  p-7">
             <img
               className=" w-[80vw] h-[37vh] m-auto rounded-md"
-              src="src\assets\designCamp\Assets\Camp-Images\High-Quality-Images\Calagus Islands.jpg"
+              src={data1[num.id].campImg}
             />
             <div className="font-bold text-xl py-4 flex justify-between">
-              <h1>{data1[1].title}</h1>{" "}
+              <h1>{data1[num.id].title}</h1>{" "}
               <label className="font-semibold">$104.99/night</label>
             </div>
             <div className="text-left text-gray-500">
@@ -51,7 +55,7 @@ const CampsPage = () => {
               <Reviews />
             </div>
             <button className="bg-black px-6 py-4 text-white rounded-md flex ml-auto gap-3 font-semibold ">
-              <img src="src\assets\designCamp\Assets\Chat Bubble.svg" />
+              <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1695818727/Chat_Bubble_xdiows.svg" />
               Leave a Review
             </button>
           </div>

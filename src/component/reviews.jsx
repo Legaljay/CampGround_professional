@@ -4,6 +4,7 @@ export default function Reviews() {
       name: "Adam jones",
       reviews:
         "Honestly one of the best experiences ever, took us a while to figure out how ton get here , its amazing!",
+        
     },
     {
       name: "Issac Dylan",
@@ -17,10 +18,10 @@ export default function Reviews() {
     },
   ];
   return (
-    <div>{data.map(item=>{
+    <div>{data.map((item,index)=>{
         return(
             
-            <div className=" p-6 text-left">
+            <div className=" p-6 text-left" key={index}>
               <h1 className="text-lg font-bold flex">
                 {item.name}<label className="font-semibold ml-auto">time</label>
               </h1>

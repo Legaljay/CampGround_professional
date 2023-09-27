@@ -1,6 +1,7 @@
 import CampgroundCard from "./CampgroundCard";
 import Campdata from "./CampData";
 import { NavBar } from "./NavBar";
+import { Outlet } from "react-router-dom";
 
 function SearchPage() {
   const data = Campdata;
@@ -53,10 +54,13 @@ function SearchPage() {
               img={item.img}
               title={item.title}
               description={item.description}
+              campImg={item.campImg}
+              id={index}
             />
           );
         })}
       </div>
+      <Outlet/>
     </div>
   );
 }

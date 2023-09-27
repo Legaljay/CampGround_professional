@@ -30,7 +30,7 @@ function HomePage() {
               <img src="src\assets\designCamp\Assets\Checkmark.svg" />
               <h3>See locations for all camps.</h3>
             </li>
-            <Link to={"/SearchPage"}>
+            <Link to={"/searchPage"}>
               {" "}
               <button className="p-3 px-4 bg-black text-white rounded hover:translate-y-[3px] hover:shadow-2xl hover: ease-in duration-200">
                 View Campgrounds
