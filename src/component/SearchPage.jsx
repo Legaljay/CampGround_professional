@@ -69,9 +69,10 @@ function SearchPage() {
           Or add your own campground
         </a>
       </div>
-      <div className=" p-0 flex flex-wrap gap-12 justify-center m-auto">
+      <div className=" p-0 flex flex-wrap gap-12">
         {campgroundsToMap.map((item, index)=>{
           return (
+            
                     <CampgroundCard
                       key={index}
                       img={item.img}
@@ -80,6 +81,7 @@ function SearchPage() {
                       campImg={item.campImg}
                       id={index}
                     />
+            
                   );
         })
         //! an Alternative without using campgroundsTomap on line 26
