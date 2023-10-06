@@ -2,10 +2,27 @@ import CampgroundCard from "./CampgroundCard";
 import Campdata from "./CampData";
 import { NavBar } from "./NavBar";
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 function SearchPage() {
+  const [searchText, setSearchText]= useState('')
+  const [isFilter, setIsFilter] = useState(false)
+  const [filteredCamp, setFilteredCamp] = useState([]);
   const data = Campdata;
+  // const filteredData = data.filter(camp => camp.title.toLowerCase().includes(searchText.toLowerCase()))
+  const campgroundsToMap = isFilter ? filteredCamp : data;
+  function handleInputChange(e){
+    setSearchText(e.target.value)
+  }
+  function handleSearch(e){
+    e.preventDefault()
+    setIsFilter(true)
+    const filteredData = data.filter((camp) =>
+      camp.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredCamp(filteredData);
 
+  }
   return (
     <div className=" px-[10%] ">
       <div className=" h-20 flex items-center">
@@ -32,12 +49,14 @@ function SearchPage() {
             <div className="flex flex-wrap gap-2 border-2 border-gray py-2 pl-4 w-fit rounded bg-white">
               <img src="src\assets\designCamp\Assets\Search Icon.svg" />
               <input
-                type="type"
+                type="text"
                 placeholder="Search for Camps"
                 className="py-1  border-blue"
-              ></input>
+                value={searchText}
+                onChange={handleInputChange}
+              />
             </div>
-            <button className="py- px-7 rounded text-white bg-black hover:ease-in-out duration-300">
+            <button className="py- px-7 rounded text-white bg-black hover:ease-in-out duration-300" onClick={handleSearch}>
               Search
             </button>
           </div>
@@ -47,10 +66,10 @@ function SearchPage() {
         </a>
       </div>
       <div className=" p-0 flex flex-wrap gap-12 justify-center m-auto">
-        {data.map((item, index) => {
+        {campgroundsToMap.map((item, index) => {
           return (
             <CampgroundCard
-              key={index}
+              key={item.id}
               img={item.img}
               title={item.title}
               description={item.description}
