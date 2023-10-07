@@ -16,14 +16,13 @@ function SearchPage() {
   };
 
   const handleSetfilter = () => {
-    setIsfilter(true)
-    const filteredData =
-      data.filter((item) =>
-        item.title.toLowerCase().includes(search.toLowerCase())
+    setIsfilter(true);
+    const filteredData = data.filter((item) =>
+      item.title.toLowerCase().includes(search.toLowerCase())
     );
-    setfilterdata(filteredData)
+    setfilterdata(filteredData);
   };
-  const campgroundsToMap = isfilter ? filterdata: data;
+  const campgroundsToMap = isfilter ? filterdata : data;
   return (
     <div className=" px-[10%] ">
       <div className=" h-20 flex items-center">
@@ -70,47 +69,18 @@ function SearchPage() {
         </a>
       </div>
       <div className=" p-0 flex flex-wrap gap-12">
-        {campgroundsToMap.map((item, index)=>{
+        {campgroundsToMap.map((item, index) => {
           return (
-            
-                    <CampgroundCard
-                      key={index}
-                      img={item.img}
-                      title={item.title}
-                      description={item.description}
-                      campImg={item.campImg}
-                      id={index}
-                    />
-            
-                  );
-        })
-        //! an Alternative without using campgroundsTomap on line 26
-        // isfilter == false 
-        //   ? data.map((item, index) => {
-        //       return (
-        //         <CampgroundCard
-        //           key={index}
-        //           img={item.img}
-        //           title={item.title}
-        //           description={item.description}
-        //           campImg={item.campImg}
-        //           id={index}
-        //         />
-        //       );
-        //     })
-        //   : filterdata.map((item) => {
-        //     return(
-        //     <CampgroundCard
-        //     key={index}
-        //     img={item.img}
-        //     title={item.title}
-        //     description={item.description}
-        //     campImg={item.campImg}
-        //     id={index}
-        //   />
-        //     )
-        //     })
-            }
+            <CampgroundCard
+              key={index}
+              img={item.img}
+              title={item.title}
+              description={item.description}
+              campImg={item.campImg}
+              id={index}
+            />
+          );
+        })}
       </div>
       <Outlet />
     </div>
