@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function SearchPage() {
+
   const [searchText, setSearchText]= useState('')
   const [isFilter, setIsFilter] = useState(false)
   const [filteredCamp, setFilteredCamp] = useState([]);
@@ -21,8 +22,8 @@ function SearchPage() {
       camp.title.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilteredCamp(filteredData);
-
   }
+
   return (
     <div className=" px-[10%] ">
       <div className=" h-20 flex items-center">
@@ -33,7 +34,7 @@ function SearchPage() {
         <h1>Home</h1>
         <div className="flex ml-auto items-center m-6 ">
           <h1 className="m-4 hover:translate-y-[2px]">Login</h1>
-          <button className= " bg-black text-white font-serif p-4 rounded-md text-sm hover:animate-pulse">
+          <button className=" bg-black text-white font-serif p-4 rounded-md text-sm hover:animate-pulse">
             Create an account
           </button>
         </div>
@@ -65,7 +66,7 @@ function SearchPage() {
           Or add your own campground
         </a>
       </div>
-      <div className=" p-0 flex flex-wrap gap-12 justify-center m-auto">
+      <div className=" p-0 flex flex-wrap gap-12">
         {campgroundsToMap.map((item, index) => {
           return (
             <CampgroundCard
@@ -79,7 +80,7 @@ function SearchPage() {
           );
         })}
       </div>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
