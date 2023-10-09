@@ -60,7 +60,7 @@ function HomePage() {
       <img
         className="h-screen w-screen"
         alt=""
-        src="src/assets/designCamp/Assets/Hero Image.jpg"
+        src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696857782/Hero_Image_xrhjgx.jpg"
       />
     </div>
   );
