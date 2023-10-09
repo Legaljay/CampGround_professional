@@ -19,15 +19,15 @@ function HomePage() {
           </p>
           <ul className="flex-col">
             <li className="flex  items-center gap-2 pb-2 ">
-              <img src="src\assets\designCamp\Assets\Checkmark.svg" />
+              <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859996/Checkmark_p3fevm.svg" />
               <p className="">Add your own camp suggestions.</p>
             </li>
             <li className="flex items-center gap-2 pb-2">
-              <img src="src\assets\designCamp\Assets\Checkmark.svg" />
+              <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859996/Checkmark_p3fevm.svg" />
               <h3>Leave reviews and experiences.</h3>
             </li>
             <li className="flex items-center gap-2 pb-4">
-              <img src="src\assets\designCamp\Assets\Checkmark.svg" />
+              <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859996/Checkmark_p3fevm.svg" />
               <h3>See locations for all camps.</h3>
             </li>
             <Link to={"/searchPage"}>
@@ -40,18 +40,18 @@ function HomePage() {
           <p className="text-sm ">Partnered with:</p>
           <div className="flex max-w-[100%]">
             <div>
-              <img className="" src="src\assets\designCamp\Assets\Airbnb.svg" />
+              <img className="" src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859995/Airbnb_iym98q.svg" />
             </div>
             <div>
               <img
                 className=""
-                src="src\assets\designCamp\Assets\Booking.svg"
+                src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859995/Booking_nn72kq.svg"
               />
             </div>
             <div>
               <img
                 className=""
-                src="src\assets\designCamp\Assets\Plum Guide.svg"
+                src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1696859997/Plum_Guide_qvkbfd.svg"
               />
             </div>
           </div>
