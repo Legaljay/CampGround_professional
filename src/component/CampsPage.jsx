@@ -4,12 +4,11 @@ import data from "../component/CampData";
 import { useParams } from "react-router-dom";
 
 const CampsPage = () => {
-    const data1 = data
-    const num = useParams()
-    
-    
+  const data1 = data;
+  const num = useParams();
+
   return (
-    <div className="px-14 py-4 max-h-100vh" >
+    <div className="px-14 py-4 max-h-100vh">
       <div className=" h-20 flex items-center">
         <div className="mr-[3em] p-4">
           <NavBar />
@@ -26,7 +25,7 @@ const CampsPage = () => {
 
       {/* ____________________content--------- */}
       <div className="grid grid-col grid-cols-[1fr,1.7fr] gap-4 my-6">
-        <div className="border-4 h-fit w-fit p-9">
+        <div className="border-4 h-fit w-fit p-9 hover:scale-130 ">
           <img src="https://res.cloudinary.com/dhlv2hnt4/image/upload/v1695818171/Map_lsr2ke.png" />
         </div>
         <div className="">

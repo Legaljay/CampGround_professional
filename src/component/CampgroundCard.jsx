@@ -9,7 +9,7 @@ function CampgroundCard(props) {
       <div className="p-2 border-2 rounded-lg shadow-lg hover:translate-y-[2px] w-[30%]">
         <div>
           <img
-            className="rounded w-[100%]"
+            className="rounded w-[100%] hover:scale-110"
             src= {props.img}
           />
         </div>
