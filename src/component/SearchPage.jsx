@@ -4,6 +4,7 @@ import { NavBar } from "./NavBar";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
+
 function SearchPage() {
 
   const [searchText, setSearchText]= useState('')
